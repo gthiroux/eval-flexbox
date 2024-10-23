@@ -1,0 +1,58 @@
+/* Rend tout le bloc main flexible donc place la zone jaune en dessous de la liste tracklist */
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+} 
+/* Rend la <div class="app-top"> en flex pour pourvoir mettre ses enfants l'un à cote de l'autre */
+.app-top{
+    display: flex;
+    background: linear-gradient(#000, #313131);
+}
+/* On travaille la navigation (zone rouge) avec un axe principal vertical vers le bas, grace au flex-direction.Chaque élement de cette nav est separe d'un espace égal grace au justify-content */
+.app-nav{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #313131;
+}
+/* Permet de mettre la div de classe app-content de la largeur voulue grace à flex-grow */
+.app-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+/* Le display: flex permet de mettre les elements de la <div class="album"> les uns à cote des autres.Mise en place du dégradé avec linear-gradient.*/
+.app-content .album{
+    display: flex;
+    background: linear-gradient(#000, #313131);
+}
+.app-content .tracklist{
+    background: linear-gradient(#000, #313131);
+}
+/* Cible les éléments de la liste ayant comme classe track-item. Met les éléments de chaque côté du bloc grace au justify-content */
+.app-content .track-item {
+    display:flex;
+    flex-direction: row; 
+    justify-content: space-between;
+
+}
+/* permet d'écarter à chaque bout de la page les elements de la div de classe app-bottom */
+.app-bottom {
+    display: flex;
+    justify-content:space-between ;
+    background-color: #313131;
+}
+/* Centre les elements et permet d'agrandir le conteneur de la div  */
+.current{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+/* ecarte les controles les uns des autres avec le justify-content et les centre dans la div avec le align-items */
+.controls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* perte de la zone jaune */
